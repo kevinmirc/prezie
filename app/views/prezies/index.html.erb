@@ -1,8 +1,17 @@
-<% @prezies.each do |prezie| %>
-  <hr>
-    <%= prezie.title %><br>
-    <%= prezie.thumbnail %><br>
-    <%= prezie.created_at %><br>
-  <hr>
+<div class="search">
+  <%= form_tag search_prezies_path, remote: true, id: "prezie-search-field" %>
+  <%= text_field_tag "search[query]" %>
+</div>
 
-<% end %>
+<div class="prezies">
+  <% @prezies.each do |prezie| %>
+    <hr>
+      <div class="prezie">
+        <%= prezie.title %><br>
+        <%= prezie.thumbnail %><br>
+        <%= prezie.created_at %><br>
+      </div>
+    <hr>
+  <% end %>
+</div>
+
