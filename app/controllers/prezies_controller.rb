@@ -1,10 +1,11 @@
 class PreziesController < ApplicationController
   def index
-    @prezies = Presentation.all
+    # @prezies = Presentation.all
+    @prezies = Presentation.order('created_at DESC')
   end
 
   def search
-    @prezies = Presentation.search(search_params)
+    @prezies = Presentation.search(search_params).order('created_at DESC')
 
     respond_to do |format|
       format.html { }
