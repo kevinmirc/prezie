@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  primary_id: MyString
+  title: MyString
+  thumbnail: MyString
+  creator_id: 
+
+two:
+  primary_id: MyString
+  title: MyString
+  thumbnail: MyString
+  creator_id: 
