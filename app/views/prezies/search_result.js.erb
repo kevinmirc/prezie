@@ -1,4 +1,5 @@
 $('.prezies').html("") //clear list
+$('.pagination').html("") //remove pagination buttons
 
 <% @prezies.each do |prezie| %>
   $('.prezies').append(`<%= render partial: "prezie", collection: @prezies %>`)

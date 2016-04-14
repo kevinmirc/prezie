@@ -1,6 +1,6 @@
 <div class="prezie col-md-4">
   <%= image_tag prezie.thumbnail, class: "prezie-img thumbnail" %>
-  <p><strong><%= prezie.title %></strong></p>
+  <h4><strong><%= prezie.title %></strong></h4>
   <p>Created by: <%= prezie.creator.name.titleize %></p>
   <p><%= prezie.created_at.localtime.strftime("%B %d, %Y") %></p>
 </div>
