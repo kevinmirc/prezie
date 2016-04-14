@@ -5,3 +5,30 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+file = File.open("/Users/kevinmircovich/Documents/code/prezi/test/fixtures/preszies.json",  "r")
+contents = file.read
+prezies = JSON.parse(contents)
+
+puts "Creating Prezies and creators"
+
+prezies.each do |presentation|
+
+  creator = Creator.create!( 
+    name: presentation["creator"]["name"], 
+    profile_url: presentation["creator"]["profileUrl"]
+    )
+
+  Presentation.create!(
+  primary_id: presentation["id"], 
+  title: presentation["title"], 
+  thumbnail: presentation["thumbnail"], 
+  creator_id: creator.id, 
+  created_at: presentation["createdAt"]
+  )
+end
+
+puts "#{prezies.count} presentations created" 
+
+
+
+
