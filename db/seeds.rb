@@ -13,7 +13,7 @@ puts "Creating Prezies and creators"
 
 prezies.each do |presentation|
 
-  creator = Creator.create!( 
+  creator = Creator.find_or_create_by!( 
     name: presentation["creator"]["name"], 
     profile_url: presentation["creator"]["profileUrl"]
     )
