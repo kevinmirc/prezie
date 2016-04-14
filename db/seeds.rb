@@ -5,7 +5,10 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-file = File.open("/Users/kevinmircovich/Documents/code/prezi/test/fixtures/preszies.json",  "r")
+
+path_to_json_prezies = Dir.pwd + "/test/fixtures/preszies.json"
+
+file = File.open(path_to_json_prezies,  "r")
 contents = file.read
 prezies = JSON.parse(contents)
 
