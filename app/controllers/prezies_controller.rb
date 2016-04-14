@@ -1,6 +1,5 @@
 class PreziesController < ApplicationController
   def index
-    # @prezies = Presentation.all
     @prezies = Presentation.order('created_at DESC')
   end
 
