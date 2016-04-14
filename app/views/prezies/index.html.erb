@@ -4,14 +4,6 @@
 </div>
 
 <div class="prezies">
-  <% @prezies.each do |prezie| %>
-    <hr>
-      <div class="prezie">
-        <%= prezie.title %><br>
-        <%= prezie.thumbnail %><br>
-        <%= prezie.created_at %><br>
-      </div>
-    <hr>
-  <% end %>
+  <%= render partial: "prezie", collection: @prezies %>
 </div>
 

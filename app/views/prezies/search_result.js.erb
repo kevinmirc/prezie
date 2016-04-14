@@ -1,13 +1,5 @@
 $('.prezies').html("") //clear list
 
 <% @prezies.each do |prezie| %>
-  $('.prezies').append(`
-    <hr>
-    <div class='prezie'>
-        <%= prezie.title %><br>
-        <%= prezie.thumbnail %><br>
-        <%= prezie.created_at %><br>
-    </div>
-    <hr>
-    `)
+  $('.prezies').append(`<%= render partial: "prezie", collection: @prezies %>`)
 <% end %>
