@@ -1,9 +1,7 @@
-<hr>
-  <div class="prezie">
-    <strong><%= prezie.title %></strong><br>
-    <%= image_tag prezie.thumbnail, class: "prezie-img" %><br>
-    by: <%= prezie.creator.name %><br>
-    <%= prezie.thumbnail %><br>
-    <%= prezie.created_at %><br>
-  </div>
-<hr>
+<div class="prezie col-md-4">
+  <strong><%= prezie.title %></strong>
+  <%= image_tag prezie.thumbnail, class: "prezie-img imag-thumbnail" %>
+  by: <%= prezie.creator.name %>
+  <%= prezie.thumbnail %>
+  <%= prezie.created_at %>
+</div>

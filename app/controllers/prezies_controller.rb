@@ -1,6 +1,7 @@
 class PreziesController < ApplicationController
   def index
-    @prezies = Presentation.order('created_at DESC')
+    @prezies = Presentation.paginate(:page => params[:page])
+    @prezies = Presentation.paginate(:per_page => 20, :page => params[:page]).order('created_at DESC')
   end
 
   def search
